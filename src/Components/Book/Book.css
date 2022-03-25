@@ -1,0 +1,32 @@
+.book-container{
+    padding: 20px;
+    border: 2px solid grey;
+    border-radius: 20px;
+    /* position: relative; */
+}
+.book-container img{
+    border-radius: 10px;
+    width: 60%;
+    
+}
+.book-image,.book-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book-price{
+    color:orange;
+    margin-left: 10px;
+}
+.cart-btn{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    background-color: aquamarine;
+    /* position: absolute;
+    bottom: 0; */
+}
