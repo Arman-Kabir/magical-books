@@ -14,7 +14,6 @@ const Books = () => {
     }, [])
 
     let newCart;
-    let obj;
     const handleBtnClick = book => {
         console.log(cart);
 
@@ -50,24 +49,16 @@ const Books = () => {
                 ></Book>)
             }
             </div>
-
             <div className="carts-container">
-                <h2>Cart{cart.length}</h2>
-
+                {/* <h2>Cart{filteredCart.length}</h2> */}
                 {
                     filteredCart.map(cart => <Cart
                         key={cart.id}
                         cart={cart}
                     ></Cart>)
                 }
-
-
             </div>
-
-
         </div>
-
     );
 };
-
 export default Books;
