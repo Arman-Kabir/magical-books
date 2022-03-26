@@ -50,13 +50,15 @@ const Books = () => {
     // Choose one Book for me
     let newOne;
     const chooseOneForMe = () => {
-        console.log('one chosen', filteredCart);
+        if (filteredCart.length > 0) {
+            console.log('one chosen', filteredCart);
 
-        newOne = [filteredCart[Math.floor(Math.random() * filteredCart.length)]];
+            newOne = [filteredCart[Math.floor(Math.random() * filteredCart.length)]];
 
-        setChooseOne(newOne);
-        
-        console.log('chOne', chooseOne);
+            setChooseOne(newOne);
+
+            console.log('chOne', chooseOne);
+        }
     }
 
     return (
