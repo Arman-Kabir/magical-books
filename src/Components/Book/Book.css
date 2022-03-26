@@ -1,8 +1,8 @@
 .book-container{
     padding: 20px;
-    border: 2px solid grey;
+    border: 2px solid rgba(82, 26, 173, 0.712);
     border-radius: 20px;
-    /* position: relative; */
+    background-color: rgba(69, 4, 173, 0.753);
 }
 .book-container img{
     border-radius: 10px;
@@ -13,19 +13,23 @@
     justify-content: center;
     align-items: center;
 }
+.book-title{
+    color:rgb(25, 1, 70);
+    font-size: 20px;
+}
 .book-price{
-    color:orange;
+    color:rgb(0, 7, 2);
     margin-left: 10px;
+    font-size: 24px;
 }
 .cart-btn{
-
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border: none;
     border-radius: 15px;
-    background-color: aquamarine;
-    /* position: absolute;
-    bottom: 0; */
+    background-color: rgba(14, 1, 56, 0.5);
+    color: rgb(222, 211, 255);
+    font-size: 16px;
 }

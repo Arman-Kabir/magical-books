@@ -15,7 +15,7 @@ const Book = ({ book, handleBtnClick }) => {
             </div>
 
             <div className='book-info'>
-                <h3>{name}</h3>
+                <h3 className='book-title'>{name}</h3>
                 <p className='book-price'>${price}</p>
             </div>
 

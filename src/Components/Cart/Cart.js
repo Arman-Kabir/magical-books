@@ -10,15 +10,13 @@ const Cart = ({ cart }) => {
 
             <div className='cart-body'>
                 <img src={image} alt="" />
-
-                <div className="cart-info">
-                    <h3>{name}</h3>
-
-                    <button className='deleteBtn'>
-                        <FontAwesomeIcon icon={faDeleteLeft}></FontAwesomeIcon>
-                    </button>
-                </div>
+                <h3>{name}</h3>
             </div>
+
+            <button className='deleteBtn'>
+                <FontAwesomeIcon icon={faDeleteLeft}></FontAwesomeIcon>
+            </button>
+
 
         </div>
     );

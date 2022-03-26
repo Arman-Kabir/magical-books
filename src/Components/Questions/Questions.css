@@ -1,12 +1,33 @@
-.questions{
+.questions-container{
     width: 1240px;
     margin: 30px auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 20px;
-    background-color: cadetblue;
-    /* margin: 10px; */
+    background-color: rgba(1, 12, 31, 0.966);
+    border-radius: 10px;
+    padding: 20px;
 }
 .text-center{
     text-align: center;
+    color: #3656f6;
+}
+.text-line{
+    color: rgb(223, 223, 223);
+    font-size: 18px;
+    line-height: 28px;
+}
+/* Making The questions responsive */
+@media screen and (max-width:1280px){
+    .questions-container{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:640px){
+    .questions-container{
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: 0 auto;
+    }
 }

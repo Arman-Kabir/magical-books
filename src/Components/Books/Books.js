@@ -7,8 +7,8 @@ const Books = () => {
     const [books, setBooks] = useState([]);
     const [cart, setCart] = useState([]);
     const [chooseOne, setChooseOne] = useState([]);
-    const cartOne = [];
 
+    // Fetching data from a fake DB
     useEffect(() => {
         fetch('magical-books.json')
             .then(res => res.json())
@@ -18,7 +18,6 @@ const Books = () => {
     let newCart;
     const handleBtnClick = book => {
         console.log(cart);
-
         // Checking Duplicates and adding unique products
         if (cart.length > 0) {
             if (cart.find(cart => cart.id === book.id)) {
@@ -36,7 +35,7 @@ const Books = () => {
         }
     }
 
-    // Filtering so the cart gets maximum 4 books
+    // Filtering, so the cart gets maximum 4 books
     let filteredCart = cart.filter((cart, index) => {
         return index < 4;
     })
@@ -72,7 +71,7 @@ const Books = () => {
             }
             </div>
             <div className="carts-container">
-                <h2>Selected Books:{filteredCart.length}</h2>
+                <h2 className='cart-title-center'>Selected Books:{filteredCart.length}</h2>
                 {
                     filteredCart.map(cart => <Cart
                         key={cart.id}
