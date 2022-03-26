@@ -18,6 +18,16 @@
     position: sticky;
     top: 0;
 }
+.option-btn{
+    display: block;
+    background-color: beige;
+    border-radius: 10px;
+    margin: 10px 20px;
+}
+.btn-1{
+    color:green;
+    font-weight: bold;
+}
 
 @media screen and (max-width:600px){
     .container{

@@ -6,6 +6,8 @@ import './Books.css'
 const Books = () => {
     const [books, setBooks] = useState([]);
     const [cart, setCart] = useState([]);
+    const [chooseOne, setChooseOne] = useState([]);
+    const cartOne = [];
 
     useEffect(() => {
         fetch('magical-books.json')
@@ -35,9 +37,27 @@ const Books = () => {
     }
 
     // Filtering so the cart gets maximum 4 books
-    const filteredCart = cart.filter((cart,index) => {
+    let filteredCart = cart.filter((cart, index) => {
         return index < 4;
     })
+
+    // make the Empty Cart to clear selected books
+    const emptyCart = () => {
+        console.log('filtered cart empty');
+        setCart([]);
+        setChooseOne([]);
+    }
+    // Choose one Book for me
+    let newOne;
+    const chooseOneForMe = () => {
+        console.log('one chosen', filteredCart);
+
+        newOne = [filteredCart[Math.floor(Math.random() * filteredCart.length)]];
+
+        setChooseOne(newOne);
+        
+        console.log('chOne', chooseOne);
+    }
 
     return (
         <div className='container'>
@@ -50,13 +70,25 @@ const Books = () => {
             }
             </div>
             <div className="carts-container">
-                {/* <h2>Cart{filteredCart.length}</h2> */}
+                <h2>Selected Books:{filteredCart.length}</h2>
                 {
                     filteredCart.map(cart => <Cart
                         key={cart.id}
                         cart={cart}
                     ></Cart>)
                 }
+                <button className='option-btn btn-1' onClick={chooseOneForMe}>
+                    <p>Choose 1 for Me</p>
+                </button>
+                {
+                    chooseOne.map(cart => <Cart
+                        key={cart.id}
+                        cart={cart}
+                    ></Cart>)
+                }
+                <button className='option-btn btn-2' onClick={emptyCart}>
+                    <p>Choose Again</p>
+                </button>
             </div>
         </div>
     );

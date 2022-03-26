@@ -14,13 +14,11 @@ const Cart = ({ cart }) => {
                 <div className="cart-info">
                     <h3>{name}</h3>
 
-                    <button>
+                    <button className='deleteBtn'>
                         <FontAwesomeIcon icon={faDeleteLeft}></FontAwesomeIcon>
                     </button>
                 </div>
-
             </div>
-
 
         </div>
     );
