@@ -7,7 +7,6 @@
 .book-container img{
     border-radius: 10px;
     width: 60%;
-    
 }
 .book-image,.book-info{
     display: flex;
